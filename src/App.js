@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Container, Header, } from "semantic-ui-react"; 
 import Flashcards from "./Flashcards";
+import FlashcardForm from "./FlashcardForm"
 class App extends Component {
 state = {
   flashcards: [
@@ -11,11 +12,22 @@ state = {
   ]
 }
 
+addFlashcard = (flashcard) => {
+  console.log('Add :>> ', flashcard);
+  const newFlashcard = { ...flashcard, id: Math.random()}
+  this.setState({
+    flashcards: [newFlashcard, ...this.state.flashcards],
+  })
+}
+
   render() {
     return (
       <Container>
         <Header as="h1">Flash Cards</Header>
+        <FlashcardForm addFlashcard_via_FlashcardForm={this.addFlashcard} />
+
         <Flashcards flashcards={this.state.flashcards} />
+       
       </Container>
     );
   }
