@@ -10,13 +10,13 @@ state = {
   flashcards: [
     { id: 1, question: "What is the Matrix?", answer: "follow the white rabbit", },
     { id: 2, question: "What is the meaning of life", answer: "The answer is 42", },
-    { id: 3, question: "Question this", answer: "Answer this", },
+    { id: 3, question: "Question this", answer: "Still trying to figure this out...", },
   ]
 }
 
 addFlashcard = (flashcard) => {
   console.log('Add :>> ', flashcard);
-  const newFlashcard = { ...flashcard, id: Math.random()}
+  const newFlashcard = { ...flashcard, id: (Math.random()*100)}
   this.setState({
     flashcards: [newFlashcard, ...this.state.flashcards],
   })
@@ -33,6 +33,7 @@ addFlashcard = (flashcard) => {
       </Container>
     );
   }
+  debugger;
 }
 
 export default App;
