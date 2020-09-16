@@ -45,3 +45,5 @@ const Flashcards2 = ({flashcards}) => {
 
 
 export default Flashcards2;
+
+// to read more: https://stackoverflow.com/questions/45536886/render-multiple-modals-correctly-with-map-in-react-bootstrap
