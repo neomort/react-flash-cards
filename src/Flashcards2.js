@@ -2,11 +2,10 @@
 import React from 'react'
 import { Button, Header, Icon, Modal } from 'semantic-ui-react'
 
-function Flashcards2({flashcard}) {
-    // Need to figure out how to pass and how to write in function 
-    // if its from webs doc of function example
+const Flashcards2 = ({flashcards}) => {
   const [open, setOpen] = React.useState(false)
-  flashcards.map(card => (
+  return flashcards.map(card => 
+    (
     <Modal
       basic
       onClose={() => setOpen(false)}
@@ -30,9 +29,11 @@ function Flashcards2({flashcard}) {
         </Button>
       </Modal.Actions>
     </Modal>
-  ))
+  )
   
+  )
+ 
 }
 
 
-//export default Flashcards2;
+export default Flashcards2;

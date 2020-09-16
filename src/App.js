@@ -3,7 +3,7 @@ import './App.css';
 import { Container, Header, Button, Icon, Modal } from "semantic-ui-react"; 
 import Flashcards from "./Flashcards";
 import FlashcardForm from "./FlashcardForm";
-//import Flashcards2 from "./Flashcards2"
+import Flashcards2 from "./Flashcards2"
 
 class App extends Component {
 state = {
@@ -28,7 +28,7 @@ addFlashcard = (flashcard) => {
         <Header as="h1">Flash Cards</Header>
         <FlashcardForm addFlashcard_via_FlashcardForm={this.addFlashcard} />
 
-        <Flashcards flashcards={this.state.flashcards} />
+        <Flashcards2 flashcards={this.state.flashcards} />
        
       </Container>
     );
