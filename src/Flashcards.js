@@ -2,9 +2,6 @@ import React from "react";
 
 const Flashcards = ({ flashcards }) => (
     <div>
-            
-
-    
     <h1>Cards:</h1>
     
         {flashcards.map(card => (
